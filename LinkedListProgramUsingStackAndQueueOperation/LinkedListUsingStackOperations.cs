@@ -37,5 +37,39 @@ namespace LinkedListProgramUsingStackAndQueueOperation
                 }
             }
         }
+        internal void Peek()
+        {
+            if(this.top==null)
+            {
+                Console.WriteLine("Can't get any Value.......Stack is Empty");
+                return;
+            }
+            Console.WriteLine("\n{0} is at the top of stack ", this.top.data);
+        }
+        internal void Pop()
+        {
+            if(this.top==null)
+            {
+                Console.WriteLine("Stack is Empty..... Can't Pop Any Value");
+                return;
+            }
+            Console.WriteLine("Poped Value From Stack is " + this.top.data);
+            this.top = this.top.next;
+        }
+        internal void IsEmpty()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Already Empty");
+            }
+            else
+            {
+                while (this.top != null)
+                {
+                    Peek();
+                    Pop();
+                }
+            }
+        }
     }
 }

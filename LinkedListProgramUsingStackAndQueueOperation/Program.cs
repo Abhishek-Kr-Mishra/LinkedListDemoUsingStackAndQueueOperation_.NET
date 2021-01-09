@@ -12,6 +12,15 @@ namespace LinkedListProgramUsingStackAndQueueOperation
             linkedListProgramUsingStack.Push(30);
             linkedListProgramUsingStack.Push(56);
             linkedListProgramUsingStack.Display();
+
+            linkedListProgramUsingStack.Peek();
+
+            linkedListProgramUsingStack.Pop();
+            linkedListProgramUsingStack.Display();
+
+            linkedListProgramUsingStack.IsEmpty();
+            linkedListProgramUsingStack.Display();
         }
+        
     }
 }
