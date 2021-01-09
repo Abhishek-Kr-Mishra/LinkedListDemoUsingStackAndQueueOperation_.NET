@@ -12,7 +12,7 @@ namespace LinkedListProgramUsingStackAndQueueOperation
             this.front = null; 
             this.rear = null;
         }
-        public void Enqueue(int value)
+        public void EnQueue(int value)
         {
             Node node = new Node(value);
             if (this.rear == null)
@@ -22,14 +22,33 @@ namespace LinkedListProgramUsingStackAndQueueOperation
             this.rear.next = node;
             this.rear = node;
         }
+        public void DeQueue()
+        {
+            if (front == null)
+            {
+                return;
+            }
+            Console.WriteLine("\nRemoved Value From Queue is " + front.data);
+            front = front.next;
+            if(front==null)
+            {
+                rear = null;
+            }
+        }
         public void DisplayQueue()
         {
             Node temp = front;
-            while(temp!=null)
+            if(front==null)
             {
-                Console.Write("\n"+temp.data + " ");
-                temp = temp.next;
-                
+                Console.WriteLine("Empty Queue");
+            }
+            else
+            {
+                while (temp != null)
+                {
+                    Console.Write(temp.data + " ");
+                    temp = temp.next;
+                }
             }
         }
     }

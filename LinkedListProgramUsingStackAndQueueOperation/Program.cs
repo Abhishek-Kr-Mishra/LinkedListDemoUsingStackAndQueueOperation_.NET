@@ -22,10 +22,13 @@ namespace LinkedListProgramUsingStackAndQueueOperation
             linkedListProgramUsingStack.IsEmpty();
             linkedListProgramUsingStack.Display();
 
-            queueOperations.Enqueue(56);
-            queueOperations.Enqueue(30);
-            queueOperations.Enqueue(70);
-            Console.WriteLine("Queue Value");
+            queueOperations.EnQueue(56);
+            queueOperations.EnQueue(30);
+            queueOperations.EnQueue(70);
+            Console.WriteLine("Whole Queue Value");
+            queueOperations.DisplayQueue();
+
+            queueOperations.DeQueue();
             queueOperations.DisplayQueue();
         }
         
